@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>今日上主想跟我說甚麼？</title>
+<title>耶和華啊,請說</title>
 <style>
 :root{box-sizing:border-box;--bg:#f2ebe0;--chip:#fffdf9;--chipb:#e0d2bf;--fg:#2b2622;--mut:#7a6f66;--ac:#8a5a44;--btn:#8a5a44;--btnfg:#fff;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1917;--chip:#2a2522;--chipb:#40372f;--fg:#f1ebe4;--mut:#a89d92;--ac:#d9a58a;--btn:#d9a58a;--btnfg:#1c1917}}
@@ -41,12 +41,12 @@ button{font:inherit;cursor:pointer}
 #reset{background:none;border:0;color:var(--mut);font-size:12px;margin-top:26px;text-decoration:underline}
 </style></head>
 <body><button id="mus" aria-label="背景音樂">♪ 音樂 關</button><audio id="bgm" src="music.mp3" loop preload="none"></audio><main>
-<h1>今日上主想跟我說甚麼？</h1>
-<p class="sub" id="sub">選一個範疇，或直接按「我在敬聽」</p>
+<h1>耶和華啊,請說</h1>
+<p class="sub" id="sub">選一個範疇，或直接按「僕人敬聽」</p>
 <div id="cats"></div>
 <div id="art" class="idle"><i class="cross"></i><span class="cap">安靜片刻，然後輕按下面的按鈕</span></div>
 <div id="verse"><p id="zh"></p><p id="en"></p><p id="vr"></p></div>
-<button id="go">我在敬聽</button>
+<button id="go">僕人敬聽</button>
 <div class="row" id="act" hidden><button id="share">分享</button><button id="save">收藏</button></div>
 <button id="reset">測試用:重新抽一次(正式版每日只可抽一次)</button>
 </main>
@@ -80,7 +80,7 @@ $('reset').onclick=()=>{
   try{localStorage.removeItem('dv3')}catch(e){}
   $('art').className='idle';$('art').innerHTML=IDLE;$('verse').classList.remove('show');$('act').hidden=true;$('cats').classList.remove('lock');
   cat=-1;[...$('cats').children].forEach(x=>x.classList.remove('on'));
-  $('go').disabled=false;$('go').textContent='我在敬聽';$('sub').textContent='選一個範疇，或直接按「我在敬聽」';
+  $('go').disabled=false;$('go').textContent='僕人敬聽';$('sub').textContent='選一個範疇，或直接按「我在敬聽」';
   $('save').textContent='收藏';$('share').textContent='分享';
 };
 $('save').onclick=()=>{$('save').textContent='已收藏 ♥'};
